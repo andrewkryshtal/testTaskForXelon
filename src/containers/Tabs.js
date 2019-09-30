@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav, NavItem, NavLink, Button } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 import history from '../history';
 import { withRouter } from "react-router";
@@ -30,7 +30,7 @@ class Tabs extends Component {
     }
 
     componentDidMount() {
-      if (this.props.location.pathname == "/") {
+      if (this.props.location.pathname === "/") {
         history.push('/my-org');
       }
     }

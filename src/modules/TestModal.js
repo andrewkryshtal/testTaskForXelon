@@ -3,9 +3,6 @@ import { Modal, ModalHeader, ModalBody, Button } from 'reactstrap';
 import history from '../history';
 
 class TestModal extends Component {
-    constructor(props) {
-        super(props);
-      }
     
     componentDidMount() {
         history.push({
