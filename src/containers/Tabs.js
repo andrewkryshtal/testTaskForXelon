@@ -38,7 +38,7 @@ class Tabs extends Component {
     toggle(tab) {
       if (this.state.activeTab !== tab) {
         this.setState({
-          activeTab: tab
+          activeTab: `/my-org${tab}`
         });
       }
       history.push(`/my-org${tab}`);
@@ -48,7 +48,7 @@ class Tabs extends Component {
       const renderTabs = this.data.map((tab, index) => (
         <NavItem key={index}>
           <NavLink
-            className={classnames({ active: this.state.activeTab === `${tab.url}` })}
+            className={classnames({ active: this.state.activeTab === `/my-org${tab.url}` })}
             onClick={() => { this.toggle(`${tab.url}`); }}
           >
             {tab.title}
