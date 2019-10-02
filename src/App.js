@@ -3,9 +3,9 @@ import Tabs from './containers/Tabs';
 import Addons from './modules/Addons';
 import Network from './modules/Network';
 import Overview from './modules/Overview';
+import MyOrg from './modules/MyOrg';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from './history';
-import MyOrg from './modules/MyOrg';
 
 
 function App() {
