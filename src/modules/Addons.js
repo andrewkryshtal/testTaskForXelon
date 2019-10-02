@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import TestModal from './TestModal';
+import history from '../history';
 
 class Addons extends Component {
     constructor(props) {
@@ -11,6 +12,14 @@ class Addons extends Component {
           isModalOpen: false
         };
       }
+
+    componentDidMount() {
+        if (history.location.search === '?mode=edit') {
+            this.setState({
+                isModalOpen: true
+            });
+        }
+    }
 
     toggle() {
         this.setState(prevState => ({
