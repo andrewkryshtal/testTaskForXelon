@@ -36,7 +36,7 @@ class Tabs extends Component {
     }
   
     render() {
-      const renderTabs = this.data.map((tab, index) => (
+      let renderTabs = this.data.map((tab, index) => (
         <NavItem key={index}>
           <NavLink
             to={ `/my-org${tab.url}` }
