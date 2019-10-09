@@ -32,7 +32,8 @@ class Addons extends Component {
             <div>
                 <h2>Addons Component</h2>
                 <Button onClick={() => this.toggle()}>Open modal</Button>
-                {this.state.isModalOpen ? 
+                {
+                    this.state.isModalOpen ? 
                     <TestModal
                         toggle={this.toggle}
                     /> :
